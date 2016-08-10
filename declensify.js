@@ -1,4 +1,5 @@
-var Declensifier = function(wordsSet) {
+var Typo  = {};
+Typo.declensify= function(wordsSet) {
 	if(arguments.length <1)
 		throw new Error('The parameter is missed');
 	if(!Array.isArray(wordsSet))
@@ -40,4 +41,4 @@ var Declensifier = function(wordsSet) {
 	}
 }
 
-module.exports.Declensifier = Declensifier;
+module.exports = Typo;

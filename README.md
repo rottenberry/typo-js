@@ -3,11 +3,11 @@ The class provides some typographical staff: declensioning, transforming zeros t
 
 
 ## API:
-* [Declensifier()](#Declensifier)
+* [Typo.declensify()](#declensify)
 
 ##Description
 
-####<a name="Declensifier"></a>Declensifier(wordsSet)
+####<a name="declensify"></a>Typo.declensify(wordsSet)
 
 The function returns a callback, which takes only one parameter - a number.
 
@@ -16,9 +16,9 @@ $showNumber = should a callback show a number passed to it  before a word or not
 
 #### Toy example:
 ````javascript
-  var Declensifier = require('./declensify.js');
+  var declensify = require('./declensify.js').declensify;
 
-  var days = Declensifier(["день", "дня", "дней"]);
+  var days = declensify(["день", "дня", "дней"]);
 
   console.log(days(23)) // => 23 дня
   
