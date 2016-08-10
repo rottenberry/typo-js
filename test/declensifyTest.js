@@ -1,5 +1,5 @@
 var expect = require('chai').expect;
-var declensify = require('../declensify.js').declensify;
+var declensify = require('../typo.js').declensify;
 
 describe('Factory of Declensifiers', function(){
 	describe('Parameter checking', function(){
