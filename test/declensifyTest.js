@@ -24,6 +24,7 @@ describe('Factory of Declensifiers', function(){
 				true,
 				false,
 				new Error(),
+				function(){}
 			];
 			wrongParameters.forEach(function(parameter, i){
 				var type = typeof parameter;
@@ -119,7 +120,8 @@ describe('declensify input checking', function(){
 				[],
 				new Error(),
 				null,
-				undefined
+				undefined,
+				function(){}
 			]
 			wrongParameters.forEach(function(parameter, i){
 				it('should throw an error if the parameter is not integer: '+parameter, function(){
