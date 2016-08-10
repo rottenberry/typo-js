@@ -1,5 +1,5 @@
-# Typo
-The class provides some typographical staff: declensioning, transforming zeros to K and so on.
+# Typo for Node.js
+The module provides some typographical staff: declensioning, transforming zeros to K and so on.
 
 
 ## API:
