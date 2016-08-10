@@ -92,7 +92,7 @@ describe('declensify input checking', function(){
 		['1', '2', '3'],
 	]
 	correctParameters.forEach(function(parameter, i){
-		it('the returned declensify should be a function if the parameter is correct: '+parameter, function(){
+		it('the returned declensifier should be a function if the parameter is correct: '+parameter, function(){
 			expect( declensify(parameter) ).to.be.a('function');
 		})
 	})
@@ -112,7 +112,6 @@ describe('declensify input checking', function(){
 				Infinity,
 				-Infinity,
 				NaN,
-				-NaN,
 				true,
 				false,
 				'123',
