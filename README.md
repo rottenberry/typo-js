@@ -15,11 +15,11 @@ wordsSet = a list of russian words formed by rule "1-3-9" // ["день", "дн�
 
 #### Toy example:
 ````javascript
-  var declensify = require('./typo.js').declensify;
+  var Typo = require('./typo.js')
+	var declensify = Typo.declensify;
 
   var days = declensify(["день", "дня", "дней"]);
-
-  console.log(days(23)) // => 23 дня
+  console.log(days(21)) // => 21 день
   
 ````
 
