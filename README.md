@@ -24,4 +24,4 @@ $showNumber = should a callback show a number passed to it  before a word or not
   
 ````
 
-Don't forget to put the script in a local node_modules order to require it like *require('declensify')*
+Don't forget to put the script in a local node_modules folder to require it like *require('declensify')*
