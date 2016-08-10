@@ -11,8 +11,7 @@ The class provides some typographical staff: declensioning, transforming zeros t
 
 The function returns a callback, which takes only one parameter - a number.
 
-$wordsSet = a list of russian words formed by rule "1-3-9" // ["день", "дня", "дней"]  
-$showNumber = should a callback show a number passed to it  before a word or not.
+wordsSet = a list of russian words formed by rule "1-3-9" // ["день", "дня", "дней"]
 
 #### Toy example:
 ````javascript
