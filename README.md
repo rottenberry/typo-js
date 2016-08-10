@@ -23,8 +23,6 @@ wordsSet = a list of russian words formed by rule "1-3-9" // ["день", "дн�
   
 ````
 
-Don't forget to put the script in a local node_modules folder to require it like *require('typo')*
-
 #### An example for browsers:
 ````javascript
   var declensify = Typo.declensify;
@@ -33,5 +31,3 @@ Don't forget to put the script in a local node_modules folder to require it like
   console.log(days(21)) // =>день
   
 ````
-
-Put the script in any folder of your web server
