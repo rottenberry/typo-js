@@ -44,9 +44,8 @@ describe('Factory of Declensifiers', function(){
 			]
 			arraysWithWrongSizes.forEach(function(parameter, i){
 				it('should throw an error if the length of the parameter is not equal to 3: '+parameter.length, function(){
-					expect( ()=> declensify([]) ).to.throw('Lenght of the parameter is not equal to 3');
+					expect( ()=> declensify([]) ).to.throw('Length of the parameter is not equal to 3');
 				})
-
 			})
 		})
 
