@@ -16,10 +16,12 @@ $showNumber = should a callback show a number passed to it  before a word or not
 
 #### Toy example:
 ````javascript
-  var Declensifier = require('./declensify');
+  var Declensifier = require('./declensify.js');
 
   var days = Declensifier(["день", "дня", "дней"]);
 
   console.log(days(23)) // => 23 дня
   
 ````
+
+Don't forget to put the script in a local node_modules order to require it like *require('declensify')*
