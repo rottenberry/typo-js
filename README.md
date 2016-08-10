@@ -23,4 +23,4 @@ wordsSet = a list of russian words formed by rule "1-3-9" // ["день", "дн�
   
 ````
 
-Don't forget to put the script in a local node_modules folder to require it like *require('declensify')*
+Don't forget to put the script in a local node_modules folder to require it like *require('typo')*
