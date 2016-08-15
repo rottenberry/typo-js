@@ -2,7 +2,7 @@ var expect = require('chai').expect;
 var Typo = require('../typo.js')
 var pluralize = Typo.pluralize;
 
-describe('Factory of Declensifiers', function(){
+describe('Factory of Plurulizators', function(){
 	describe('Parameter checking', function(){
 		
 		describe('The parameter is missed', function(){
