@@ -1,6 +1,6 @@
 'use strict';
 let Typo  = {};
-Typo.declensify= function(wordsSet) {
+Typo.pluralize= function(wordsSet) {
 	if(arguments.length <1)
 		throw new Error('The parameter is missed');
 	if(!Array.isArray(wordsSet))

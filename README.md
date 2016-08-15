@@ -1,13 +1,13 @@
 # Typo
-The module provides some typographical staff: declensioning, transforming zeros to K and so on.
+The module provides some typographical stuff: declensioning, transforming zeros to K and so on.
 The module works both in Node.js and browsers environments.
 
 ## API:
-* [Typo.declensify()](#declensify)
+* [Typo.pluralize()](#pluralize)
 
 ##Description
 
-####<a name="declensify"></a>Typo.declensify(wordsSet)
+####<a name="pluralize"></a>Typo.pluralize(wordsSet)
 
 The function returns a callback, which takes only one parameter - a number.
 
@@ -16,18 +16,18 @@ wordsSet = a list of russian words formed by rule "1-3-9" // ["день", "дн�
 #### An example for Node.js:
 ````javascript
   var Typo = require('./typo.js');
-  var declensify = Typo.declensify;
+  var pluralize = Typo.pluralize;
 
-  var days = declensify(["день", "дня", "дней"]);
+  var days = pluralize(["день", "дня", "дней"]);
   console.log(days(21)) // =>день
   
 ````
 
 #### An example for browsers:
 ````javascript
-  var declensify = Typo.declensify;
+  var pluralize = Typo.pluralize;
 
-  var days = declensify(["день", "дня", "дней"]);
+  var days = pluralize(["день", "дня", "дней"]);
   console.log(days(21)) // =>день
   
 ````

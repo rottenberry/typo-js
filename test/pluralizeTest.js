@@ -1,13 +1,13 @@
 var expect = require('chai').expect;
 var Typo = require('../typo.js')
-var declensify = Typo.declensify;
+var pluralize = Typo.pluralize;
 
 describe('Factory of Declensifiers', function(){
 	describe('Parameter checking', function(){
 		
 		describe('The parameter is missed', function(){
 			it('should throw an error if the parameter is missed', function(){
-				expect( () => declensify()).to.throw('The parameter is missed');
+				expect( () => pluralize()).to.throw('The parameter is missed');
 			})
 		})
 
@@ -29,7 +29,7 @@ describe('Factory of Declensifiers', function(){
 			wrongParameters.forEach(function(parameter, i){
 				var type = typeof parameter;
 				it('should throw an error if a non-array parameter has been passed: '+type, function(){
-					expect( () => declensify(parameter) ).to.throw('The parameter is not an array');
+					expect( () => pluralize(parameter) ).to.throw('The parameter is not an array');
 				})
 
 			})
@@ -45,7 +45,7 @@ describe('Factory of Declensifiers', function(){
 			]
 			arraysWithWrongSizes.forEach(function(parameter, i){
 				it('should throw an error if the length of the parameter is not equal to 3: '+parameter.length, function(){
-					expect( ()=> declensify([]) ).to.throw('Length of the parameter is not equal to 3');
+					expect( ()=> pluralize([]) ).to.throw('Length of the parameter is not equal to 3');
 				})
 			})
 		})
@@ -60,7 +60,7 @@ describe('Factory of Declensifiers', function(){
 			]
 			arraysSize3WithNonStringElements.forEach(function(parameter, i){
 				it('should throw an error if the parameter has length 3, but contains non-string elements: '+parameter, function(){
-					expect( () => declensify(parameter)).to.throw('The parameter contains non-string elements');
+					expect( () => pluralize(parameter)).to.throw('The parameter contains non-string elements');
 				})
 				
 			})
@@ -77,7 +77,7 @@ describe('Factory of Declensifiers', function(){
 			]
 			arraysWithEmptyStringLength3.forEach(function(parameter, i){
 				it('should throw an error if parameter has 3 strings , but at least one of them is empty: '+parameter, function(){
-					expect( () => declensify(parameter) ).to.throw('The parameter contains empty strings');
+					expect( () => pluralize(parameter) ).to.throw('The parameter contains empty strings');
 				})
 			})
 		})
@@ -85,7 +85,7 @@ describe('Factory of Declensifiers', function(){
 
 })
 
-describe('declensify input checking', function(){
+describe('pluralize input checking', function(){
 	var correctParameters = [
 		['hello', 'foo', 'bar'],
 		['john', 'bob', 'paul'],
@@ -93,13 +93,13 @@ describe('declensify input checking', function(){
 	]
 	correctParameters.forEach(function(parameter, i){
 		it('the returned declensifier should be a function if the parameter is correct: '+parameter, function(){
-			expect( declensify(parameter) ).to.be.a('function');
+			expect( pluralize(parameter) ).to.be.a('function');
 		})
 	})
 
 	describe('Parameter checking', function(){
 		var wordsSet = ['hello', 'foo', 'bar'];
-		var testingDeclensifier = declensify(wordsSet);
+		var testingDeclensifier = pluralize(wordsSet);
 		describe('The parameter is missed', function(){
 			it('should throw an error if the number is missed', function(){
 				
@@ -134,7 +134,7 @@ describe('declensify input checking', function(){
 	})
 })
 
-describe('declensify output checking', function(){
+describe('pluralize output checking', function(){
 	var expectedResults = [
 		[1, "день"], [2, "дня"], [3, "дня"], [4, "дня"], [5, "дней"],
 		[6, "дней"], [7, "дней"], [8, "дней"], [9, "дней"], [10, "дней"],
@@ -142,7 +142,7 @@ describe('declensify output checking', function(){
 		[111, "дней"], [1024, "дня"], [999, "дней"], [1000002, "дня"],
 	]
 	var wordsSet = ["день", "дня", "дней"];
-	var days = declensify(wordsSet);
+	var days = pluralize(wordsSet);
 
 	expectedResults.forEach(function(pair, i){
 		var number = pair[0];
