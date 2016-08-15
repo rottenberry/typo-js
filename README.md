@@ -1,5 +1,5 @@
 # Typo
-The module provides some typographical stuff: declensioning, transforming zeros to K and so on.
+The module provides some typographical stuff: pluralization, transforming zeros to K and so on.
 The module works both in Node.js and browsers environments.
 
 ## API:
